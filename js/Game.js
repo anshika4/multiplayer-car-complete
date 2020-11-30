@@ -54,14 +54,14 @@ class Game {
       //index of the array
       var index = 0;
 
-      var x = 0;
+      var x = 175;
       var y;
 
       for(var plr in allPlayers){
         //add 1 to the index for every loop
         index = index + 1 ;
 
-        x = x + 275;
+        x = x + 200;
         //use data from the database to display the cars in y direction
         y = displayHeight - allPlayers[plr].distance;
         cars[index-1].x = x;
@@ -89,7 +89,7 @@ class Game {
       player.update();
     }
 
-    if(player.distance > 3520 && passedFinish === false)
+    if(player.distance > 3900 && passedFinish === false)
     {
       Player.updateFinishedPlayers();
       player.rank = finishedPlayers;
